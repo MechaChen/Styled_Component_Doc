@@ -1,34 +1,38 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Background = styled.div`
+const Wrapper = styled.div`
+    padding: 40px 30px;
     background-color: papayawhip;
-    text-align: center;
-    font-family: verdana;
-    color: palevioletred;
-    padding: 20px 0 40px;
 `;
 
-const Title = styled.h2`
-    margin: 0;
-    padding: 30px;
-`;
-
-const Slogan = styled.p`
-    width: 30%;
-    margin: auto;
+const Button = styled.button`
+    margin-right: 20px;
     padding: 10px 20px;
-    border: 1px solid palevioletred;
+    border: 2px solid palevioletred;
+    color: palevioletred;
+    font-size: 18px;
+    background-color: transparent;
+`;
+
+const TomatoButton = styled(Button)`
+    color: tomato;
+    border-color: tomato;
+`;
+
+const PlumButton = styled(Button)`
+    color: plum;
+    border-color: plum;
 `;
 
 function HomePage() {
     return (
-        <Background>
-            <Title>Styled Components</Title>
-            <Slogan>Let's Get Started</Slogan>
-        </Background>    
+        <Wrapper>
+            <Button>Normal Button</Button>
+            <TomatoButton>Tomato Button</TomatoButton>
+            <PlumButton>Plum Button</PlumButton>
+        </Wrapper>
     );
 }
 
 export default HomePage;
-
